@@ -7,6 +7,7 @@ import os
 
 user = os.environ["user"]
 password = os.environ["password"]
+print(user,password)
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
