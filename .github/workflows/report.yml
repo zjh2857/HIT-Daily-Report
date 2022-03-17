@@ -23,5 +23,4 @@ jobs:
           user: ${{ secrets.user }}
           password: ${{ secrets.password }}
         run:
-          echo $user
           python main.py
