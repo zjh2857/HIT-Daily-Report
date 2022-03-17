@@ -22,4 +22,4 @@ jobs:
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
         run:
-          python main.py
+          echo $user;python main.py
