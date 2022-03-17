@@ -5,8 +5,8 @@ from selenium.webdriver.chrome.options import Options
 import requests
 import os
 
-user = os.environ("user")
-password = os.environ("password")
+user = os.environ["user"]
+password = os.environ["password"]
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
