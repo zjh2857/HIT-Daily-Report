@@ -7,7 +7,7 @@ import os
 
 user = os.environ["USER"]
 password = os.environ["PASSWORD"]
-print("##")
+
 print(user,password)
 print("##")
 chrome_options = Options()
