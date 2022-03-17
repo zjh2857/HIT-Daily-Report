@@ -19,7 +19,7 @@ jobs:
           sudo dpkg -i google-chrome-stable_current_amd64.deb
       - name: start daily report
         env: 
-          user: ${{ secrets.USER }}
-          password: ${{ secrets.PASSWORD }}
+          USER: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run:
           echo $user;python main.py
