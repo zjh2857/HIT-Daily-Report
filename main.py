@@ -24,11 +24,9 @@ comd = f'''
 driver.execute_script(comd)
 sessionid = driver.get_cookies()[0]['value']
 driver.quit()
-print(location)
-print(location+"a")
 token = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/getToken",cookies={'JSESSIONID':sessionid}).text
 
 
-data = location%(token)
+data = location[:location.find("\"token\"")] + "\"token\":\"%s\"}"%token
 res = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/save",data={"info":data},cookies={'JSESSIONID':sessionid}).text
 print(res)
