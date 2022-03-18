@@ -24,5 +24,6 @@ jobs:
         env: 
           USER: ${{ secrets.USER }}
           PASSWORD: ${{ secrets.PASSWORD }}
+          LOCATION: ${{ secrets.LOCATION }}
         run:
           python main.py
