@@ -1,7 +1,8 @@
 name: GitHub Actions Demo
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "32 0-2 * * *"
+    - cron: "35 0-2 * * *"
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
