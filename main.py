@@ -21,13 +21,17 @@ comd = f'''
         document.getElementById('password').value='{password}';\n
         document.getElementById('login_submit').click();
         '''
+print(comd)
 driver.execute_script(comd)
 sessionid = driver.get_cookies()[0]['value']
 driver.quit()
 token = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/getToken",cookies={'JSESSIONID':sessionid}).text
 
-print({location})
-data = {location}[:{location}.find("\"token\"")] + "\"token\":\"%s\"}"%token
+data = f'''
+{location}
+'''
+print(data)
+data = data[:data.find("\"token\"")] + "\"token\":\"%s\"}"%token
 print(data)
 res = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/save",data={"info":data},cookies={'JSESSIONID':sessionid}).text
 print(res)
