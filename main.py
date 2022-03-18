@@ -28,5 +28,6 @@ token = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/getToken",co
 
 
 data = location[:location.find("\"token\"")] + "\"token\":\"%s\"}"%token
+print(data)
 res = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/save",data={"info":data},cookies={'JSESSIONID':sessionid}).text
 print(res)
