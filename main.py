@@ -26,7 +26,9 @@ sessionid = driver.get_cookies()[0]['value']
 driver.quit()
 token = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xs/getToken",cookies={'JSESSIONID':sessionid}).text
 
-
+location = '''
+        {"model":{"gpsjd":126.631834,"gpswd":45.729538,"jzdz":"","kzl1":"1","kzl2":"","kzl3":"","kzl4":"","kzl5":"","kzl6":"黑龙江省","kzl7":"哈尔滨市","kzl8":"南岗区","kzl9":"新苗圃街57号","kzl10":"黑龙江省哈尔滨市南岗区新苗圃街57号","kzl11":"","kzl12":"","kzl13":"0","kzl14":"","kzl15":"0","kzl16":"","kzl17":"1","kzl18":"0;","kzl19":"","kzl20":"","kzl21":"","kzl22":"","kzl23":"0","kzl24":"0","kzl25":"","kzl26":"","kzl27":"","kzl28":"0","kzl29":"","kzl30":"","kzl31":"","kzl32":"2","kzl33":"","kzl34":{},"kzl38":"黑龙江省","kzl39":"哈尔滨市","kzl40":"南岗区","kzl41":"0","kzl42":""},"token":"ddd"}
+'''
 data = location[:location.find("\"token\"")] + "\"token\":\"%s\"}"%token
 print(data)
 res = requests.post("https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/save",data={"info":data},cookies={'JSESSIONID':sessionid}).text
