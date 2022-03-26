@@ -2,6 +2,7 @@
 ## 1.本地安装
 ```
 git clone https://github.com/zjh2857/HIT-Daily-Report.git
+cd HIT-Daily-Report
 pip install selenium
 pip install webdriver_manager
 sudo dpkg -i google-chrome-stable_current_amd64.deb
