@@ -8,7 +8,7 @@ pip install webdriver_manager
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 export USER=yourusername
 export PASSWORD=yourpassword
-export LOCATION=yourlocation
+export LOCATION='yourlocation'
 python main.py
 ```
 location可以在https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/edit 处获取，获取方式为上报前按下F12，上报后查看save项，info的值即为location，如为url编码则需要解码。
