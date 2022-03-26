@@ -5,7 +5,7 @@ git clone https://github.com/zjh2857/HIT-Daily-Report.git
 pip install selenium
 pip install webdriver_manager
 sudo dpkg -i google-chrome-stable_current_amd64.deb
-export USERNAME=yourusername
+export USER=yourusername
 export PASSWORD=yourpassword
 export LOCATION=yourlocation
 python main.py
@@ -18,4 +18,4 @@ location可以在https://xg.hit.edu.cn/zhxy-xgzs/xg_mobile/xsMrsbNew/edit 处获
 
 ## 2.Github Actions
 
-您也可以直接fork本项目，点击Setting，点击secret添加secret `USERNAME` `PASSWORD` `LOCATION`,在Action栏中，可以看到每日上报的情况。
+您也可以直接fork本项目，点击Setting，点击secret添加secret `USER` `PASSWORD` `LOCATION`,在Action栏中，可以看到每日上报的情况。
