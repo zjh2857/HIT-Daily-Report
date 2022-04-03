@@ -1,8 +1,5 @@
 name: Daily Report
-on:
-  push:
-  schedule:
-    - cron: '15 0 * * *'
+
 jobs:
   build:
     runs-on: ubuntu-latest
